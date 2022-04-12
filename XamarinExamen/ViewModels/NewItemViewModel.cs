@@ -80,7 +80,7 @@ namespace XamarinExamen.ViewModels
                 Product newItem = new Product()
                 {
                     Name = Name,
-                    Price = Decimal.Parse(Name)
+                    Price = Decimal.Parse(Price)
                 };
                 var url = $"{App.Current.Resources["BaseURL"]}{App.Current.Resources["ProductsURL"]}";
                 await UnitOfWork.GetInstance.Products.AddItemAsync(url, newItem);
